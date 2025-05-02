@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: Homepage
+  output-dir: Vehicle Collision Detection
 
 website:
   title: "David Corcoran"
@@ -14,10 +14,12 @@ website:
         href: https://corcoran.georgetown.domains/Homepage/index.html
       - text: Introduction
         href: ./index.qmd
+      - text: Data Collection & Preprocessing
+        href: ./data_collection.qmd
+      - text: Methods
+        href: ./methods.qmd
       - text: Results
         href: ./results.qmd
-      - text: Report
-        href: ./report.qmd
     right:
       - icon: github
         href: https://github.com/dcorc7
