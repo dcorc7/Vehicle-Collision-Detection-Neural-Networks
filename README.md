@@ -33,6 +33,3 @@ Deriving motion-based features from bounding box sequences.
 Formatting data for input into temporal neural network architectures.
 
 You can download the full dataset and processed features from [this link](https://drive.google.com/uc?export=download&id=1c_S2MOFZySFJPpd8GTKxSXKv7SVbG0ad)
-
-=======
-# Vehicle-Collision-Detection-Neural-Networks
