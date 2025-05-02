@@ -1,0 +1,46 @@
+project:
+  type: website
+  output-dir: Homepage
+
+website:
+  title: "David Corcoran"
+  favicon: "assets/gu-logo.png"
+  back-to-top-navigation: true
+  navbar:
+    title: David Corcoran
+    search: true
+    left:
+      - text: Homepage
+        href: index.qmd
+      - text: Academic Projects
+        menu:
+          - text: Fall 2024 - DSAN 5000 Examining Success Metrics in the Film Industry
+            href: https://corcoran.georgetown.domains/5000-Project/index.html
+          - text: Fall 2024 - DSAN 5100 Analyzing Airbnb Features that Influence Rental Pricing Decisions
+            href: https://corcoran.georgetown.domains/5100-Project/index.html
+          - text: Fall 2024 - DSAN 6300 Analysis of FAA Passenger Flight Data
+            href: https://corcoran.georgetown.domains/6300-Project/index.html
+      - text: Personal Projects
+        menu:
+          - text: Movie Recommendation Model
+            href: https://corcoran.georgetown.domains/Movie-Recommendation-Model/index.html
+      - text: Resume
+        href: ./pages/resume.qmd
+    right:
+      - icon: github
+        href: https://github.com/dcorc7
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/david-corcoran-70677917a/
+        aria-label: LinkedIn
+
+format:
+  html:
+    theme: flatly
+    toc: true
+    toc-location: left
+    toc-title: Table of Contents
+    css: ./stylesheets/styles.css
+
+
+
