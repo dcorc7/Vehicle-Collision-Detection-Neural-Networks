@@ -23,11 +23,53 @@ The training process involved monitoring both training and validation loss curve
 
 Our GRU model delivered the strongest performance among all models tested in this study. As seen in Figure 4 (confusion matrix), it delivered a moderate performance in the classification task. It achieved an accuracy of 68%, indicating that just over two-thirds of all video segments were correctly labeled. The model also produced a precision of 73%, suggesting that when it predicted a crash, it was correct nearly three-quarters of the time. This high precision is important in safety-critical systems, where false positives can trigger unnecessary interventions. However, the recall rate of 66% reveals a key limitation: the model failed to detect approximately one-third of actual crash cases, which could be critical in real-world deployment where missing a true collision has severe consequences. The F1 score of 69% reflects a reasonable trade-off between precision and recall, signaling moderate overall effectiveness.
 
+:::{.columns}
+::: {.column width="50%"}
+![GRU Confusion Matrix](./img/gru_confusion_matrix.png)
+:::
+
+::: {.column width="50%"}
+![GRU Loss Curves](./img/gru_loss_curves.png)
+:::
+:::
+
 Compared to the Transformer and LSTM models, GRU’s gated architecture may have been better suited for modeling the temporal dependencies in our sequential YOLO-extracted object data. Its performance indicates that while recurrent structures like GRU can capture meaningful dynamics in video sequences, there is still room to enhance recall. Overall, the GRU’s results demonstrate promise for sequence-based collision prediction tasks, but they also highlight the importance of improving sensitivity to ensure critical crash events are not missed.
 
 # Transformer:
 
 Our transformer model achieved somewhat disappointing results when applied to the crash-no-crash task. For the classification metrics, the model yielded an overall accuracy of 58%, a precision of 59%, a recall of 53%, and an F1 score of 56%. As seen in figure 5, the model was able to better capture instances of non-crash sequences than sequences containing crashes. We believe that this slight under-sensitivity to true crash events may have resulted from the inherent class imbalances in the dataset. As for the model’s training dynamics, the whole process ran very smoothly: both the global average train and validation losses seen in figure 6 plummeted in the first two epochs and began to converge to a BCE value of around 0.6931, with almost no gap between them. While training dynamics were healthy, our convergence value corresponds to a binary classification accuracy of around 50% - meaning our model could not improve beyond a random guess. This suggests that despite stable optimization, our current feature representation and model architecture lack the predictive power needed to reliably detect crash events in dashcam video. 
+
+:::{.columns}
+::: {.column width="50%"}
+![Transformer Confusion Matrix](./img/transformer_confusion_matrix.png)
+:::
+
+::: {.column width="50%"}
+![Transformer Loss Curves](./img/transformer_loss_curves.png)
+:::
+:::
+
+# Results Summary Tables
+
+## Final Model Architectures
+
+| Hyperparameter | LSTM       | GRU        | Transformer     |
+|----------------|------------|------------|-----------------|
+| Hidden layers  | 3          | 2          | 2 (Encoders)    |
+| Layer size     | 128        | 128        | 128             |
+| Dropout        | 0.2        | 0.2        | 0.1             |
+| Optimizer      | Adam       | Adam       | Adam            |
+| Learning rate  | 0.001      | 0.001      | 0.001           |
+
+
+## Final Model Results
+
+| Performance Metric | LSTM | GRU | Transformer |
+|--------------------|------|-----|-------------|
+| Accuracy           | 66%  | 68% | 58%         |
+| Precision          | 71%  | 73% | 59%         |
+| Recall             | 51%  | 66% | 53%         |
+| F1                 | 60%  | 69% | 56%         |
 
 # Conclusion & Future Work
 
