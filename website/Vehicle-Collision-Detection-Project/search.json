@@ -7,6 +7,20 @@
     "text": "As seen in Figure 1, the LSTM model showed moderate performance, achieving a classification accuracy of approximately 66%. This means that just under two-thirds of the dashcam videos were correctly classified. With a precision of about 70.6%, the model was reasonably accurate when predicting crashes, which is beneficial in minimizing false alarms in safety-critical applications. However, its recall was lower at 51.4%, indicating that nearly half of the actual crash videos went undetected. This shortfall is significant, as failing to recognize real crashes poses serious risks in real-world deployment. The F1 score of 59.5% reflects the imbalance between precision and recall, suggesting that while the model avoids over-predicting crashes, it struggles to consistently detect them. Despite these limitations, the LSTM model demonstrates reasonable promise, but improving its sensitivity would be a necessary task for deployment in scenarios where missed detections can have significant consequences.\nThe training process involved monitoring both training and validation loss curves over multiple epochs to optimize the model. The best-performing model leveraged the following hyperparameters: a hidden size of 128, a dropout rate of 0.2, a learning rate of 0.001, three hidden layers, and the Adam optimizer.\n\n\n\n\n\nLSTM Confusion Matrix\n\n\n\n\n\n\nLSTM Loss Curves"
   },
   {
+    "objectID": "results.html#final-model-architectures",
+    "href": "results.html#final-model-architectures",
+    "title": "Results",
+    "section": "Final Model Architectures",
+    "text": "Final Model Architectures\n\n\n\nHyperparameter\nLSTM\nGRU\nTransformer\n\n\n\n\nHidden layers\n3\n2\n2 (Encoders)\n\n\nLayer size\n128\n128\n128\n\n\nDropout\n0.2\n0.2\n0.1\n\n\nOptimizer\nAdam\nAdam\nAdam\n\n\nLearning rate\n0.001\n0.001\n0.001"
+  },
+  {
+    "objectID": "results.html#final-model-results",
+    "href": "results.html#final-model-results",
+    "title": "Results",
+    "section": "Final Model Results",
+    "text": "Final Model Results\n\n\n\nPerformance Metric\nLSTM\nGRU\nTransformer\n\n\n\n\nAccuracy\n66%\n68%\n58%\n\n\nPrecision\n71%\n73%\n59%\n\n\nRecall\n51%\n66%\n53%\n\n\nF1\n60%\n69%\n56%"
+  },
+  {
     "objectID": "results.html#limitations",
     "href": "results.html#limitations",
     "title": "Results",

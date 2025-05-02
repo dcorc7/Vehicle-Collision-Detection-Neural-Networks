@@ -6,19 +6,6 @@
 This project addresses the challenge of real-time collision detection and classification using dashcam video footage, a task with critical implications for road safety, autonomous systems, and insurance verification. We applied deep learning models to classify video clips as containing collisions/near-misses or no risk of collision at all. Our approach relies on time-series features extracted from video frames using YOLO-based object detection and processes them through sequence modeling architectures to detect temporal patterns indicative of road incidents. 
 
 
-## Team
-
-Project Group 11
-
-Member 1 – David Corcoran
-
-Member 2 – Sean Morris
-
-Member 3 – Adam Stein
-
-Member 4 – Hung Tran
-
-
 ## Project Structure
 
 ```plaintext
