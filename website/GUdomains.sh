@@ -19,7 +19,7 @@ read -p "Do you want to push the website to your GU domains folder? (y/n): " ans
 
 if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
     echo "Pushing the website to the remote server..."
-    scp -r Vehicle-Collision-Detection-Project Neural Networks corcoran@corcoran.georgetown.domains:/home/corcoran/public_html/
+    scp -r Vehicle-Collision-Detection-Project corcoran@corcoran.georgetown.domains:/home/corcoran/public_html/
     echo "Website successfully pushed!"
 else
     echo "Skipping deployment."
