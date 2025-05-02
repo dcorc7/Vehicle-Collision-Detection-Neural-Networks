@@ -37,10 +37,41 @@ In this study, we explored the use of sequential deep learning models, specifica
 
 As reflected in our mostly moderate results, this study encountered several key challenges. One major limitation was visual obstruction in the dashcam footage caused by close-up objects, motion blur, poor camera angles, or climate-related distortions. These issues significantly impaired the performance of the pretrained YOLO object detection model, which ultimately reduced the quality of input data for the sequential neural networks. In some cases, even when there were no physical obstructions, the YOLO model misclassified objects, further degrading the input data quality. Consequently, the system occasionally failed to detect critical objects involved in actual collisions or mistakenly flagged non-threatening scenarios as crashes. Additionally, the majority of the collision videos featured only minor fender benders, meaning the visual cues for collision can be extremely subtle. This made it especially difficult for the model to distinguish low-impact incidents from regular traffic behaviors, such as a vehicle coming to a stop at a red light.
 
-### Examples of Poor YOLO Detections and Dashcam Footage
+### Poor Camera Angles
 
-![LSTM Loss Curves](./img/misclassified_1.png)
+:::{.columns}
+::: {.column width="50%"}
+![](./img/poor_angle_1.png)
+:::
 
+::: {.column width="50%"}
+![](./img/poor_angle_2.png)
+:::
+:::
+
+### Weather Conditions
+
+:::{.columns}
+::: {.column width="50%"}
+![](./img/weather_1.png)
+:::
+
+::: {.column width="50%"}
+![](./img/weather_2.png)
+:::
+:::
+
+### YOLO Misclassifications
+
+:::{.columns}
+::: {.column width="50%"}
+![](./img/misclassified_1.png)
+:::
+
+::: {.column width="50%"}
+![](./img/misclassified_1.png)
+:::
+:::
 
 ## Future Directions:
 
