@@ -1,0 +1,63 @@
+@media (min-width: 769px) {
+  .content {
+    width: 130%;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  .my_image_div {
+    float: right;
+    margin-left: 20px;
+    align-items: flex-start;
+  }
+
+  .text-content {
+    overflow: hidden;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .my_image_div {
+    float: none;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-content {
+    text-align: left;
+  }
+}
+
+.education_grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.work_experience_grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 20px;
+  
+}
+
+.grid_picture {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+}
+
+.skills_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  place-items: center;
+}
