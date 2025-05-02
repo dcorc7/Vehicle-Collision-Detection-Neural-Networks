@@ -11,21 +11,13 @@ website:
     search: true
     left:
       - text: Homepage
-        href: index.qmd
-      - text: Academic Projects
-        menu:
-          - text: Fall 2024 - DSAN 5000 Examining Success Metrics in the Film Industry
-            href: https://corcoran.georgetown.domains/5000-Project/index.html
-          - text: Fall 2024 - DSAN 5100 Analyzing Airbnb Features that Influence Rental Pricing Decisions
-            href: https://corcoran.georgetown.domains/5100-Project/index.html
-          - text: Fall 2024 - DSAN 6300 Analysis of FAA Passenger Flight Data
-            href: https://corcoran.georgetown.domains/6300-Project/index.html
-      - text: Personal Projects
-        menu:
-          - text: Movie Recommendation Model
-            href: https://corcoran.georgetown.domains/Movie-Recommendation-Model/index.html
-      - text: Resume
-        href: ./pages/resume.qmd
+        href: https://corcoran.georgetown.domains/Homepage/index.html
+      - text: Introduction
+        href: ./index.qmd
+      - text: Results
+        href: ./results.qmd
+      - text: Report
+        href: ./report.qmd
     right:
       - icon: github
         href: https://github.com/dcorc7
