@@ -1,5 +1,5 @@
 ./git.sh
 
 
-cd ../
+cd ../website/
 ./GUdomains.sh
