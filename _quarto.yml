@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: Vehicle Collision Detection
+  output-dir: Vehicle_Collision_Detection_Project
 
 website:
   title: "David Corcoran"
