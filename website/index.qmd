@@ -16,6 +16,6 @@ Saini et al. (2022) focused on fast, lightweight ML models for collision detecti
 Wee et al. (2022) presented a deep learning pipeline for forward collision warning, using YOLACT to balance detection accuracy and inference speed. Their system robustly handled challenging conditions like nighttime and rain, and their benchmark comparisons highlighted YOLACT as a practical compromise between performance and efficiency.
 Across these works, a common theme emerges: combining robust object detection (e.g., YOLO, Mask R-CNN) with temporal or contextual modeling enhances collision prediction. Key challenges include occlusion handling, real-time processing, and robustness under diverse conditions. These insights directly shaped our approach, where YOLOv8 preprocessing feeds into sequential models for crash prediction.
 
-
+# Github Repository
 
 The Github repository hosting all code for this project can be found [here](https://github.com/dcorc7/Vehicle-Collision-Detection-Neural-Networks)
